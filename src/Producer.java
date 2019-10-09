@@ -12,7 +12,7 @@ class Producer extends Thread {
     private BlockingQueue<String> outputQueue;
     private final int minCookTime = 1000; // 1 second
     private final int maxCookTime = 10000; // 10 seconds
-    private int serial = 0;
+    private static int serial = 0;
 
     /**
      * Constructor
@@ -20,7 +20,7 @@ class Producer extends Thread {
      * @param q the queue shared with the consumer
      */
     public Producer(BlockingQueue<String> q) {
-        super("Burger cook");
+        super("Burger cook " + serial++);
         this.outputQueue = q;
     }
 
@@ -38,7 +38,6 @@ class Producer extends Thread {
         while (true) {
             //random burger type selector
             ranType = BurgerType.values()[new Random().nextInt(BurgerType.values().length)];
-            System.out.println(ranType.toString());
 
             cookTime = minCookTime + r.nextInt(maxCookTime - minCookTime);
             cookSec = cookTime / 1000.0f;

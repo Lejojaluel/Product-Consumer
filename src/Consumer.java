@@ -12,6 +12,8 @@ class Consumer extends Thread {
     private BlockingQueue<String> inputQueue;
     private final int minEatTime = 1000;  // 1 second
     private final int maxEatTime = 10000; // 10 seconds
+    private static BurgerType burgerType = BurgerType.values()[new Random().nextInt(BurgerType.values().length)];
+    ;
 
     /**
      * Constructor
@@ -19,7 +21,7 @@ class Consumer extends Thread {
      * @param q the queue that is shared with the producer
      */
     public Consumer(BlockingQueue<String> q) {
-        super("Burger eater");
+        super(burgerType + " eater");
         this.inputQueue = q;
     }
 
