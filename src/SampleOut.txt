@@ -1,0 +1,147 @@
+Bean eater starting.
+Fish eater starting.
+Beef eater starting.
+Chicken eater starting.
+Grain eater starting.
+Burger cook 0 starting.
+Nut eater starting.
+Burger cook 1 starting.
+Burger cook 2 starting.
+Burger cook 1 about to cook burger Beef burger 123989184 for 6.58 sec
+Burger cook 0 about to cook burger Grain burger 4238239770 for 2.43 sec
+Burger cook 2 about to cook burger Nut burger 3531590680 for 8.40 sec
+Grain eater queue is empty.
+Fish eater queue is empty.
+Nut eater queue is empty.
+Burger cook 0 cooked burger Grain burger 4238239770
+Burger cook 0 about to cook burger Fish burger 3814483130 for 3.62 sec
+Nut eater peeked at Grain burger 4238239770 in queue.
+Nut eater: Grain burger 4238239770 is wrong type.
+Burger cook 0 cooked burger Fish burger 3814483130
+Burger cook 0 about to cook burger Fish burger 3889532034 for 4.86 sec
+Burger cook 1 cooked burger Beef burger 123989184
+Burger cook 1 about to cook burger Fish burger 202630490 for 6.55 sec
+Grain eater peeked at Grain burger 4238239770 in queue.
+Grain eater got Grain burger 4238239770 from queue.
+Beef eater peeked at Fish burger 3814483130 in queue.
+Beef eater: Fish burger 3814483130 is wrong type.
+Fish eater peeked at Fish burger 3814483130 in queue.
+Fish eater got Fish burger 3814483130 from queue.
+Burger cook 2 cooked burger Nut burger 3531590680
+Burger cook 2 about to cook burger Nut burger 2330915790 for 8.74 sec
+Chicken eater peeked at Beef burger 123989184 in queue.
+Chicken eater: Beef burger 123989184 is wrong type.
+Bean eater peeked at Beef burger 123989184 in queue.
+Bean eater: Beef burger 123989184 is wrong type.
+Chicken eater peeked at Beef burger 123989184 in queue.
+Chicken eater: Beef burger 123989184 is wrong type.
+Nut eater peeked at Beef burger 123989184 in queue.
+Nut eater: Beef burger 123989184 is wrong type.
+Burger cook 0 cooked burger Fish burger 3889532034
+Burger cook 0 about to cook burger Grain burger 732331595 for 7.15 sec
+Chicken eater peeked at Beef burger 123989184 in queue.
+Chicken eater: Beef burger 123989184 is wrong type.
+Grain eater took 5.87 sec to eat Grain burger 4238239770
+Burger cook 1 cooked burger Fish burger 202630490
+Burger cook 1 about to cook burger Bean burger 3541484146 for 1.64 sec
+Fish eater took 5.81 sec to eat Fish burger 3814483130
+Bean eater peeked at Beef burger 123989184 in queue.
+Bean eater: Beef burger 123989184 is wrong type.
+Burger cook 1 cooked burger Bean burger 3541484146
+Burger cook 1 about to cook burger Fish burger 2531963585 for 9.46 sec
+Fish eater peeked at Beef burger 123989184 in queue.
+Fish eater: Beef burger 123989184 is wrong type.
+Beef eater peeked at Beef burger 123989184 in queue.
+Beef eater got Beef burger 123989184 from queue.
+Burger cook 2 cooked burger Nut burger 2330915790
+Burger cook 2 about to cook burger Grain burger 3860041778 for 7.14 sec
+Chicken eater peeked at Nut burger 3531590680 in queue.
+Chicken eater: Nut burger 3531590680 is wrong type.
+Fish eater peeked at Nut burger 3531590680 in queue.
+Fish eater: Nut burger 3531590680 is wrong type.
+Burger cook 0 cooked burger Grain burger 732331595
+Burger cook 0 about to cook burger Nut burger 3717723635 for 7.54 sec
+Nut eater peeked at Nut burger 3531590680 in queue.
+Nut eater got Nut burger 3531590680 from queue.
+Bean eater peeked at Fish burger 3889532034 in queue.
+Bean eater: Fish burger 3889532034 is wrong type.
+Fish eater peeked at Fish burger 3889532034 in queue.
+Fish eater got Fish burger 3889532034 from queue.
+Grain eater peeked at Fish burger 202630490 in queue.
+Grain eater: Fish burger 202630490 is wrong type.
+Fish eater took 1.80 sec to eat Fish burger 3889532034
+Chicken eater peeked at Fish burger 202630490 in queue.
+Chicken eater: Fish burger 202630490 is wrong type.
+Burger cook 1 cooked burger Fish burger 2531963585
+Burger cook 1 about to cook burger Grain burger 1144835898 for 8.86 sec
+Burger cook 2 cooked burger Grain burger 3860041778
+Burger cook 2 about to cook burger Fish burger 779613511 for 2.12 sec
+Burger cook 0 cooked burger Nut burger 3717723635
+Burger cook 0 about to cook burger Fish burger 2952297467 for 3.25 sec
+Beef eater took 8.93 sec to eat Beef burger 123989184
+Burger cook 2 cooked burger Fish burger 779613511
+Burger cook 2 about to cook burger Bean burger 4081856507 for 2.77 sec
+Chicken eater peeked at Fish burger 202630490 in queue.
+Chicken eater: Fish burger 202630490 is wrong type.
+Nut eater took 7.97 sec to eat Nut burger 3531590680
+Bean eater peeked at Fish burger 202630490 in queue.
+Bean eater: Fish burger 202630490 is wrong type.
+Grain eater peeked at Fish burger 202630490 in queue.
+Grain eater: Fish burger 202630490 is wrong type.
+Nut eater peeked at Fish burger 202630490 in queue.
+Nut eater: Fish burger 202630490 is wrong type.
+Burger cook 0 cooked burger Fish burger 2952297467
+Burger cook 0 about to cook burger Grain burger 770517013 for 5.55 sec
+Burger cook 2 cooked burger Bean burger 4081856507
+Burger cook 2 about to cook burger Bean burger 2969028627 for 4.19 sec
+Fish eater peeked at Fish burger 202630490 in queue.
+Fish eater got Fish burger 202630490 from queue.
+Chicken eater peeked at Bean burger 3541484146 in queue.
+Chicken eater: Bean burger 3541484146 is wrong type.
+Nut eater peeked at Bean burger 3541484146 in queue.
+Nut eater: Bean burger 3541484146 is wrong type.
+Bean eater peeked at Bean burger 3541484146 in queue.
+Bean eater got Bean burger 3541484146 from queue.
+Grain eater peeked at Nut burger 2330915790 in queue.
+Grain eater: Nut burger 2330915790 is wrong type.
+Nut eater peeked at Nut burger 2330915790 in queue.
+Nut eater got Nut burger 2330915790 from queue.
+Beef eater peeked at Grain burger 732331595 in queue.
+Beef eater: Grain burger 732331595 is wrong type.
+Nut eater took 1.75 sec to eat Nut burger 2330915790
+Burger cook 1 cooked burger Grain burger 1144835898
+Burger cook 1 about to cook burger Fish burger 453373279 for 1.05 sec
+Burger cook 2 cooked burger Bean burger 2969028627
+Burger cook 2 about to cook burger Chicken burger 3216083063 for 6.34 sec
+Grain eater peeked at Grain burger 732331595 in queue.
+Grain eater got Grain burger 732331595 from queue.
+Burger cook 1 cooked burger Fish burger 453373279
+Burger cook 1 about to cook burger Chicken burger 2359328852 for 6.88 sec
+Burger cook 0 cooked burger Grain burger 770517013
+Burger cook 0 about to cook burger Fish burger 3501679310 for 8.78 sec
+Bean eater took 3.96 sec to eat Bean burger 3541484146
+Grain eater took 2.38 sec to eat Grain burger 732331595
+Chicken eater peeked at Fish burger 2531963585 in queue.
+Chicken eater: Fish burger 2531963585 is wrong type.
+Beef eater peeked at Fish burger 2531963585 in queue.
+Beef eater: Fish burger 2531963585 is wrong type.
+Fish eater took 7.82 sec to eat Fish burger 202630490
+Nut eater peeked at Fish burger 2531963585 in queue.
+Nut eater: Fish burger 2531963585 is wrong type.
+Burger cook 2 cooked burger Chicken burger 3216083063
+Burger cook 2 about to cook burger Fish burger 3476008778 for 6.85 sec
+Fish eater peeked at Fish burger 2531963585 in queue.
+Fish eater got Fish burger 2531963585 from queue.
+Nut eater peeked at Grain burger 3860041778 in queue.
+Nut eater: Grain burger 3860041778 is wrong type.
+Burger cook 1 cooked burger Chicken burger 2359328852
+Burger cook 1 about to cook burger Grain burger 4218962132 for 7.53 sec
+Grain eater peeked at Grain burger 3860041778 in queue.
+Grain eater got Grain burger 3860041778 from queue.
+Beef eater peeked at Nut burger 3717723635 in queue.
+Beef eater: Nut burger 3717723635 is wrong type.
+Fish eater took 2.94 sec to eat Fish burger 2531963585
+Bean eater peeked at Nut burger 3717723635 in queue.
+Bean eater: Nut burger 3717723635 is wrong type.
+Burger cook 0 cooked burger Fish burger 3501679310
+Burger cook 0 about to cook burger Beef burger 726517128 for 5.00 sec
