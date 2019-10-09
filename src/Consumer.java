@@ -13,7 +13,6 @@ class Consumer extends Thread {
     private final int minEatTime = 1000;  // 1 second
     private final int maxEatTime = 10000; // 10 seconds
     private static BurgerType burgerType = BurgerType.values()[new Random().nextInt(BurgerType.values().length)];
-    ;
 
     /**
      * Constructor
@@ -40,7 +39,7 @@ class Consumer extends Thread {
                 System.err.println("Consumer got an InterruptedException; message: "
                     + e.getMessage());
             }
-            System.out.printf("%s got burger '%s' from cook.\n", getName(), burger);
+            System.out.printf("%s got a %s burger '%s' from cook.\n", getName(), burgerType ,burger);
             eatTime = minEatTime + r.nextInt(maxEatTime - minEatTime);
 
             try {
