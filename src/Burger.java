@@ -7,6 +7,9 @@ public class Burger {
     private String id;
     private BurgerType type;
 
+    /*
+    Default Burger constructor for the object.
+     */
     public Burger(String id, BurgerType type) {
         this.id = id;
         this.type = type;
