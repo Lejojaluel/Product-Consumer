@@ -15,6 +15,8 @@ public class PCDriver {
         Producer p = new Producer(connectionPC);
         Consumer c = new Consumer(connectionPC);
 
+        System.out.println("Queue: " + connectionPC);
+
         p.start();
         c.start();
     }
