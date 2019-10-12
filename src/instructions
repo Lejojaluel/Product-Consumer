@@ -2,20 +2,11 @@ This is a Lab, not in-class exercise.
 
 Extend the burger cook producer consumer example by doing the following:
 
-Since there are more than one producer and consumer, both need names that are unique.  This can be as simple as adding a serial number.
-Create a collection of consumers that only eats one type of burger, so that every burger type is covered by a consumer.
-In the consumer, use the peek() method to find the burger type.  Only if the burger type matches the consumer's burger preference will it remove the burger from the queue.  If the burger type does not match, the consumer sleeps for the same length of time it takes to eat (i.e., the random value in the range).  It is OK to sleep for this time when first starting the consumer.
-In the driver, create three producers.
 Both the producer and consumer log their activities in a manner similar to the example.  Be sure to print the extra information that is new to this assignment.  Sample output is attacked.  You should log at least all of the events that you see in my sample log.  Logging additional information is OK as long as you do not go overboard.
 Remember JavaDoc and Google style, as for all programs in the class.
-Hints:
 
-An enumerated type has a values() method.
-The queue returns null if you peek and it is empty.
-run() when you extend a Thread blocks; if you extended Thread, use start().
 For up to 100 points extra credit, also do some or all of the following:
 
-Have the driver create no producers.
 The driver with a random delay creates consumers of a random type.  This consumer creation delay should be a parameter (parameters described below).   In other words, the driver is randomly creating consumers (i.e., they walk into the restaurant hungry).  If there is a burger of their type on the queue, they eat it and then are done (i.e., leave the restaurant happy).  Otherwise, they wait till there is a burger on the queue that corresponds to their burger type.
 Each consumer eats from a queue based on its burger preference (i.e., you have one queue per burger).  Use the Java container HashMap where the key is the burger type and the value is a queue for consumers for that value.  The producers put their burgers on the appropriate queue for the burger type.
 When a consumer finishes eating, it returns from its run() function.  Once a consumer has eaten its burger, it is done (i.e., no looping).

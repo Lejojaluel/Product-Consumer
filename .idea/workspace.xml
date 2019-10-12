@@ -2,18 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f0c9fa0-4ba6-414d-8da7-87008e5b1626" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/jakev.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Time.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Burger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Burger.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BurgerType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BurgerType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Consumer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PCDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PCDriver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Producer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Producer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/instructions" beforeDir="false" afterPath="$PROJECT_DIR$/src/instructions" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -28,6 +38,7 @@
   <component name="ProjectId" id="1Rwasae73wyoUHNw4nvia6GvNix" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -92,7 +103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570836607531</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Adding functionality to the Driver">
+      <created>1570846744802</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1570846744802</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -114,7 +132,8 @@
     <MESSAGE value="Test commit" />
     <MESSAGE value="Added the Random burger names" />
     <MESSAGE value="Adding whole intellij project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding whole intellij project" />
+    <MESSAGE value="Adding functionality to the Driver" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding functionality to the Driver" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
