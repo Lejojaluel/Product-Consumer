@@ -9,28 +9,31 @@ import java.util.concurrent.BlockingQueue;
 
 class Consumer extends Thread {
 
-    private BlockingQueue<String> inputQueue;
+    private BlockingQueue<Burger> inputQueue;
     private final int minEatTime = 1000;  // 1 second
     private final int maxEatTime = 10000; // 10 seconds
-    private static BurgerType burgerType = BurgerType.values()[new Random().nextInt(BurgerType.values().length)];
+    private static BurgerType burgerPref;
+    private Burger burger;
 
     /**
      * Constructor
      *
      * @param q the queue that is shared with the producer
      */
-    public Consumer(BlockingQueue<String> q) {
-        super(burgerType + " eater");
+    public Consumer(BlockingQueue<Burger> q, String name, BurgerType burgerPref) {
+        super(name);
         this.inputQueue = q;
+        this.burgerPref = burgerPref;
     }
 
     /**
-     * Do the work of comsuming the burgers.
+     * Do the work of consuming the burgers.
      */
     public void run() {
         Random r = new Random();
         int eatTime;
-        String burger = "No burger";
+        System.out.println(burgerPref + " starting");
+        //System.out.println(Producer.burger.getType());
 
         while (true) {
             try {
@@ -39,7 +42,7 @@ class Consumer extends Thread {
                 System.err.println("Consumer got an InterruptedException; message: "
                     + e.getMessage());
             }
-            System.out.printf("%s got a %s burger '%s' from cook.\n", getName(), burgerType ,burger);
+            System.out.println(getName() + " got a burger " + burger.getType() + " from cook.");
             eatTime = minEatTime + r.nextInt(maxEatTime - minEatTime);
 
             try {
@@ -48,8 +51,7 @@ class Consumer extends Thread {
                 System.err.println("Consumer got an InterruptedException; message: "
                     + e.getMessage());
             }
-            System.out.printf("%s took %.2f sec to eat the burger '%s'\n",
-                getName(), eatTime / 1000.0f, burger);
+            System.out.println(getName() + " took " + eatTime / 1000.0f + " sec to eat the burger " + burger);
         }
     }
 }

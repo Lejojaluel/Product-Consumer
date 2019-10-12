@@ -6,7 +6,7 @@
 public enum BurgerType {
     TOFU, BEEF, CHICKEN, FISH, CHEESEBURGER, BACON;
 
-    public String toString(BurgerType b) {
+    public static String toString(BurgerType b) {
         switch (b) {
             case TOFU:
                 return "Tofu";
@@ -19,7 +19,7 @@ public enum BurgerType {
             case CHEESEBURGER:
                 return "Cheeseburger";
             case BACON:
-                return "Nut";
+                return "Bacon";
             default:
                 System.err.println("This is an impossible burger type");
                 System.exit(1);

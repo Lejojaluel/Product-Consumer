@@ -9,21 +9,26 @@ import java.util.concurrent.BlockingQueue;
 
 class Producer extends Thread {
 
-    private BlockingQueue<String> outputQueue;
+    private BlockingQueue<Burger> outputQueue;
     private final int minCookTime = 1000; // 1 second
     private final int maxCookTime = 10000; // 10 seconds
     private final int maxCookers = 2;
     private final int minCookers = 0;
     private static int serial = 0;
+    public static Burger burger = new Burger("00000");
 
     /**
      * Constructor
      *
      * @param q the queue shared with the consumer
      */
-    public Producer(BlockingQueue<String> q) {
-        super("Burger cook");
+    public Producer(BlockingQueue<Burger> q, String name) {
+        super(name);
         this.outputQueue = q;
+    }
+
+    public void createNew(String id) {
+        burger = new Burger(id);
     }
 
     /**
@@ -33,29 +38,23 @@ class Producer extends Thread {
         Random r = new Random();
         int cookTime;
         float cookSec;
-        String burger;
         String burgerID;
-        BurgerType ranType;
-        int cookNum = 1;
+        BurgerType burgerType = BurgerType.BEEF;
+
+        System.out.println("Producer starting");
+        //System.out.println(Producer.burger.getType() + " in producer class");
 
         while (true) {
-            //random burger type selector
-            if(cookNum == maxCookers){
-                cookNum = 0;
-            }else{
-                cookNum++;
-            }
-            ranType = BurgerType.values()[new Random().nextInt(BurgerType.values().length)];
-
             cookTime = minCookTime + r.nextInt(maxCookTime - minCookTime);
             cookSec = cookTime / 1000.0f;
+
             burgerID = Integer.toUnsignedString(r.nextInt());
-            System.out.printf("%s %d about to cook burger %s for %.2f sec\n", getName(), cookNum, burgerID, cookSec);
-            burger = String.format("id %s", burgerID);
+            createNew(burgerID);
+            System.out.println(getName() + " is about to cook a " + burger.getType() + " burger " + burgerID + " for " + cookSec + " sec");
             try {
                 Thread.sleep(cookTime);
                 System.out.printf("%s cooked burger %s\n", getName(), burgerID);
-                outputQueue.put(burger);
+                outputQueue.put(this.burger);
             } catch (InterruptedException e) {
                 System.err.println("Producer got an InterruptedException; message: "
                     + e.getMessage());
