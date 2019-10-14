@@ -6,30 +6,34 @@
 import java.util.Random;
 import java.util.concurrent.BlockingQueue;
 
+/** The type Consumer. */
 public class Consumer extends Thread {
-  private BlockingQueue<Burger> inputQueue;
+  private BlockingQueue<Burger> queuePref;
   private final int minEatTime = 1000; // 1 second
   private final int maxEatTime = 10000; // 10 seconds
   private final BurgerType
       burgerPref; // This needed to be final otherwise each consumer would change
   private Burger burger; // Instance holder for the burger that will be tested.
+  private Integer id = 0;
+  private boolean toLeave = true;
 
   /**
    * Constructor for a consumer
    *
-   * @param q          The queue that is in place to hold the burgers
-   * @param name       The name of the consumer is already determined by the loop before
+   * @param tg the tg
+   * @param name The name of the consumer is already determined by the loop before
    * @param burgerPref The burger preferance of the consumer
    */
-  public Consumer(BlockingQueue<Burger> q, String name, BurgerType burgerPref) {
-    super(name); // Puts the name of the extended thread class
-    this.inputQueue = q;
+  public Consumer(ThreadGroup tg, String name, BurgerType burgerPref) {
+    super(tg, name); // Puts the name of the extended thread class
+    Random r = new Random();
+    this.id = Math.toIntExact(getId());
     this.burgerPref = burgerPref;
+    this.queuePref =
+        PCDriver.queues.get(burgerPref); // Get me the queue that is the same as my preference
   }
 
-  /**
-   * Do the work of consuming the burgers.
-   */
+  /** Do the work of consuming the burgers. */
   public void run() {
     Random r = new Random();
     int eatTime = minEatTime + r.nextInt(maxEatTime - minEatTime);
@@ -53,41 +57,47 @@ public class Consumer extends Thread {
        is not the right type of burger.
        */
       try {
-        if (inputQueue.peek() == null) {
+        if (queuePref.peek() == null) {
           // System.err.println("Queue is null");
-          System.out.println(getName() + " peeked at Queue but it's empty");
-        } else if (inputQueue.peek().getType() == burgerPref) {
+          System.out.println(getName() + " " + getId() + " peeked at Queue but it's empty");
+        } else if (queuePref.peek().getBurgerType() == burgerPref) {
           System.out.println(getName() + " peeked at Queue");
           System.out.println(
               getName()
-                  + " got a "
-                  + BurgerType.toString(inputQueue.peek().getType())
-                  + " burger "
-                  + inputQueue.peek().getId()
-                  + " from the queue.");
-          // Grain eater got Grain burger 4238239770 from queue.
-          burger = inputQueue.take();
-        } else {
-          System.out.println(getName() + " peeked at Queue");
-          System.out.println(
-              getName()
-                  + ": "
-                  + BurgerType.toString(inputQueue.peek().getType())
                   + " "
-                  + inputQueue.peek().getId()
+                  + getId()
+                  + " got a "
+                  + BurgerType.toString(queuePref.peek().getBurgerType())
+                  + " burger "
+                  + queuePref.peek().getBurgerId()
+                  + " from the queue.");
+          burger = queuePref.take();
+        } else {
+          System.out.println(getName() + " " + getId() + " peeked at Queue");
+          System.out.println(
+              getName()
+                  + " "
+                  + getId()
+                  + ": "
+                  + BurgerType.toString(queuePref.peek().getBurgerType())
+                  + " "
+                  + queuePref.peek().getBurgerId()
                   + " is the wrong type");
         }
       } catch (InterruptedException e) {
         System.err.println("Consumer got an InterruptedException; message: " + e.getMessage());
       }
-      //This calculates the time to eat so we know how long to sleep the thred.
+      // This calculates the time to eat so we know how long to sleep the thred.
       eatTime = minEatTime + r.nextInt(maxEatTime - minEatTime);
-      //This logic makes sures to only eat a burger if it
-      if (inputQueue.peek() != null) {
+      // This logic makes sures to only eat a burger if it
+      if (queuePref.peek() != null) {
         try {
           Thread.sleep(eatTime);
-          System.out.println(
-              getName() + " took " + eatTime / 1000.0f + " sec to eat the burger " + burger);
+          System.out.println(getName() + " took " + eatTime / 1000.0f + " sec to eat the burger ");
+          // System.out.println("Done eating burger");
+          if (toLeave) {
+            break;
+          }
         } catch (InterruptedException e) {
           System.err.println("Consumer got an InterruptedException; message: " + e.getMessage());
         }
@@ -99,5 +109,6 @@ public class Consumer extends Thread {
         }
       }
     }
+    System.err.println(getName() + " id " + getId() + " has left...");
   }
 }

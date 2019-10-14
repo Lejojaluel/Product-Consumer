@@ -7,14 +7,8 @@ Remember JavaDoc and Google style, as for all programs in the class.
 
 For up to 100 points extra credit, also do some or all of the following:
 
-The driver with a random delay creates consumers of a random type.  This consumer creation delay should be a parameter (parameters described below).   In other words, the driver is randomly creating consumers (i.e., they walk into the restaurant hungry).  If there is a burger of their type on the queue, they eat it and then are done (i.e., leave the restaurant happy).  Otherwise, they wait till there is a burger on the queue that corresponds to their burger type.
-Each consumer eats from a queue based on its burger preference (i.e., you have one queue per burger).  Use the Java container HashMap where the key is the burger type and the value is a queue for consumers for that value.  The producers put their burgers on the appropriate queue for the burger type.
-When a consumer finishes eating, it returns from its run() function.  Once a consumer has eaten its burger, it is done (i.e., no looping).
-Add an ID to the consumer.  This can be a simple random integer (like the burger IDs in the example).  The ID should be specified at creation time.
-Add an ID to the producer.  This can be a simple random integer (like the burger IDs in the example).  The ID should be specified at creation time.
-Create a Manager Thread class that will check the number of consumers and create an additional producer whenever the consumer count goes above a specified value.
-The manager checks the sum of the queue sizes every time period specified by a parameter.
 When a producer finishes cooking a burger, it checks the size of sum of the burger queues.  If the sum is at least certain value, the producer stops cooking (i.e., exits its loop and the run() function returns).
+
 Parameters should be passed in on the command line.  Or, as an alternative to using command-line parameters, you can create a separate class that holds all of the parameters.  The parameters you need to track (one way or the other) are:
 
 min and max cook and eat times,

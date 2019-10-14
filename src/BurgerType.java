@@ -1,14 +1,24 @@
-/**
- * Burger Type Enumeration Class @Author Leroy Valencia
- */
+/** Burger Type Enumeration Class @Author Leroy Valencia */
 public enum BurgerType {
+  /** Tofu burger type. */
   TOFU,
+  /** Beef burger type. */
   BEEF,
+  /** Chicken burger type. */
   CHICKEN,
+  /** Fish burger type. */
   FISH,
+  /** Cheeseburger burger type. */
   CHEESEBURGER,
+  /** Bacon burger type. */
   BACON;
 
+  /**
+   * To string string.
+   *
+   * @param b the b
+   * @return the string
+   */
   public static String toString(BurgerType b) {
     switch (b) {
       case TOFU:
